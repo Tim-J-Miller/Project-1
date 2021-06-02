@@ -1,34 +1,65 @@
-# Project-1
+# Project 1: Hivw Queries
 
-## Problem Scenario 1
 
-What is the total number of consumers for Branch1?
-What is the number of consumers for the Branch2?
+## Project Description
+Enabling Hive features with querying and optimizations where the main focal point is to understand the organization and positioning of data. Followed by querying the data, loading it into HDFS , and querying it into Hive. All of these processes are accomplished on Ubuntu.
 
-## Problem Scenario 2 
+## Technology Stack
+- DBeaver
+- Hive
+- YARN
+- HDFS
+- Git + GitHub
 
-What is the most consumed beverage on Branch1
-What is the least consumed beverage on Branch2
 
-## Problem Scenario 3
+## Features
+List of features ready and TODO's for future development.
 
-What are the beverages available on Branch10, Branch8, and Branch1?
-what are the comman beverages available in Branch4 , Branch7?
+### Features:
+A powerpoint presentation showing the queries used and the subsequent outputs
 
-## Problem Scenario 4
+### TODO:
+Put the queries into a CLI so that the output can be produced dynamically rather than viewed statically
 
-create a partition,index,View for the scenario3.
+## Getting Started
+GitHub clone URL: https://github.com/Tim-J-Miller/Project-1.git
 
-## Problem Scenario 5
+###To see the project output
+- Open the power point file to view the queries and subsequent outputs
 
-Alter the table properties to add "note","comment"
-
-## Problem Scenario 6
-
-Remove the row 5 from the output of Scenario 1 
-
-Technology to use
-1)Hive and HDFS In UBuntu.
-
-2)How to present the project
-Use the PPT presentation with screenshot of output attached along with problem senario described.
+###To produce the project output
+- Enable WSL and update to WSL2 on Windows 10 
+- Install Java JDK 1.8 on Windows 10
+- Install Ubuntu 18+
+- Install Java JDK 1.8 on Ubuntu
+- Install Hadoop on Ubuntu
+- Install Apache-Hive on Ubuntu
+- install DBeaver
+- Open Ubuntu Terminal:
+    - ssh localhost
+    - ~HADOOP_HOME/sbin/start-dfs.sh
+    - ~HADOOP_HOME/sbin/start-yarn.sh
+    - cd ~
+    - hdfs dfs -mkdir /user/<username>/project1
+    - hdfs dfs -mkdir /user/<username>/project1/Dataset
+    - hdfs dfs -chmod 777 /user/<username>/project1
+    - hdfs dfs -cp /mnt/<path to dataset>/Bev_BranchA.txt /user/project1/Bev_BranchA.txt
+    - hdfs dfs -cp /mnt/<path to dataset>/Bev_BranchB.txt /user/project1/Bev_BranchB.txt
+    - hdfs dfs -cp /mnt/<path to dataset>/Bev_BranchC.txt /user/project1/Bev_BranchC.txt
+    - hdfs dfs -cp /mnt/<path to dataset>/Bev_ConscountA.txt /user/project1/Bev_ConscountA.txt
+    - hdfs dfs -cp /mnt/<path to dataset>/Bev_ConscountB.txt /user/project1/Bev_ConscountB.txt
+    - hdfs dfs -cp /mnt/<path to dataset>/Bev_ConscountC.txt /user/project1/Bev_ConscountC.txt
+    - nohup hiveserver2 &
+    - beeline -u jdbc:hive2://localhost:10000
+  - Open DBeaver
+    - Create a hive connection
+    - Set hive connection as  the datasource
+    - Open P1-queires.sql in DBeaver
+    - Execute the queries to reproduce the outputs found in the aforemetioned powerpoint
+    
+    
+## Contributors
+- Timothy Miller
+  - https://github.com/Tim-J-Miller
+    
+## License
