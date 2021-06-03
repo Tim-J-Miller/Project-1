@@ -1,4 +1,4 @@
-# Project 1: Hivw Queries
+# Project 1: Hive Queries
 
 
 ## Project Description
